@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: demo
+  config:
+    import: "vault:"
+  cloud:
+    vault:
+      host: ${VAULT_HOST}
+      port: ${VAULT_PORT}
+      scheme: ${VAULT_SCHEME}
+      authentication: AWS_IAM
+      ssl:
+        key-store: file:${KEYSTORE}
+        key-store-password: ${KEYSTORE_PASSWORD}
+        trust-store: file:${TRUSTSTORE}
+        trust-store-password: ${TRUSTSTORE_PASSWORD}

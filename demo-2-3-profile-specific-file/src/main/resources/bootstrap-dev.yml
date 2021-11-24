@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    vault:
+      authentication: TOKEN
+      token: ${VAULT_TOKEN}

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: demo
+  config:
+    import: "vault:"
+  cloud:
+    vault:
+      authentication: TOKEN
+      token: ${VAULT_TOKEN}

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: demo
+  config:
+    import: "optional:vault:"
+  cloud:
+    vault:
+      enabled: false

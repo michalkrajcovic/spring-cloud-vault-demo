@@ -1,0 +1,27 @@
+plugins {
+    id 'idea'
+}
+
+group = 'com.example'
+version = 'SNAPSHOT'
+
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = JavaVersion.VERSION_11
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter'
+        implementation 'org.springframework.cloud:spring-cloud-starter-vault-config'
+        implementation 'com.amazonaws:aws-java-sdk-core:1.12.115'
+    }
+}
+
+wrapper {
+    gradleVersion = '7.2.0'
+    distributionType = Wrapper.DistributionType.ALL
+}
